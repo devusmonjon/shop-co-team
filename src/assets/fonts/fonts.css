@@ -1,0 +1,204 @@
+/* src/assets/fonts/fonts.css */
+
+
+/* Bold */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* Bold Oblique */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-boldoblique.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* Demibold */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-demibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/* Demibold Oblique */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-demiboldoblique.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+/* Extra Bold */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-extrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+/* Extra Bold Oblique */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-extraboldoblique.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+
+/* Heavy */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-heavy.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/* Heavy Oblique */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-heavyoblique.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+/* Medium */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/* Medium Oblique */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-mediumoblique.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+/* Regular */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Regular Oblique */
+
+@font-face {
+    font-family: 'IntegralCF';
+    src: url('./integral/Fontspring-DEMO-integralcf-regularoblique.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Satoshi */
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./satoshi/Satoshi-Light.woff2') format('woff2'), url('./satoshi/Satoshi-Light.woff') format('woff'), url('./satoshi/Satoshi-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./satoshi/Satoshi-LightItalic.woff2') format('woff2'), url('./satoshi/Satoshi-LightItalic.woff') format('woff'), url('./satoshi/Satoshi-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./satoshi/Satoshi-Regular.woff2') format('woff2'), url('./satoshi/Satoshi-Regular.woff') format('woff'), url('./satoshi/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./satoshi/Satoshi-Italic.woff2') format('woff2'), url('./satoshi/Satoshi-Italic.woff') format('woff'), url('./satoshi/Satoshi-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./satoshi/Satoshi-Medium.woff2') format('woff2'), url('./satoshi/Satoshi-Medium.woff') format('woff'), url('./satoshi/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./satoshi/Satoshi-MediumItalic.woff2') format('woff2'), url('./satoshi/Satoshi-MediumItalic.woff') format('woff'), url('./satoshi/Satoshi-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./satoshi/Satoshi-Bold.woff2') format('woff2'), url('./satoshi/Satoshi-Bold.woff') format('woff'), url('./satoshi/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./satoshi/Satoshi-BoldItalic.woff2') format('woff2'), url('./satoshi/Satoshi-BoldItalic.woff') format('woff'), url('./satoshi/Satoshi-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./satoshi/Satoshi-Black.woff2') format('woff2'), url('./satoshi/Satoshi-Black.woff') format('woff'), url('./satoshi/Satoshi-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./satoshi/Satoshi-BlackItalic.woff2') format('woff2'), url('./satoshi/Satoshi-BlackItalic.woff') format('woff'), url('./satoshi/Satoshi-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: italic;
+}
