@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "./layouts";
 import "./assets/fonts/fonts.css";
-import { Button } from "@/components";
+import { Button, HeroBanner } from "@/components";
 // import CountUp from "react-countup";
 
 const App = () => {
@@ -13,7 +13,8 @@ const App = () => {
       </div>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<h1>Welcome</h1>} />
+          {/* <Route index element={<h1>Welcome</h1>} /> */}
+          <Route path="/hero-banner" element={<HeroBanner/>} />
         </Route>
       </Routes>
     </>
