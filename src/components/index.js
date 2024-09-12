@@ -8,4 +8,6 @@ export { default as HeroBanner } from "./hero-banner/hero-banner";
 export { default as SectionTitle } from "./section-title/section-title";
 export { default as Newsletter } from "./newsletter/newsletter";
 
+export { default as Hero } from "./hero/hero";
+
 export { default as Button } from "./button/button";

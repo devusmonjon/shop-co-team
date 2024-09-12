@@ -8,6 +8,8 @@ export default {
         satoshi: ["Satoshi", "sans-serif"], // Satoshi shriftni qo'shyapmiz
       },
     },
+    // dark light theme
   },
+  darkMode: "class",
   plugins: [],
 };
