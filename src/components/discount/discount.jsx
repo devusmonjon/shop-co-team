@@ -15,8 +15,11 @@ const Discount = () => {
   return (
     <div
       className={`w-full h-[38px] flex items-center bg-black dark:bg-[#fff] relative duration-300 ${
-        isHiding ? "h-0" : "opacity-100"
+        isHiding ? "min-h-0" : "opacity-100"
       } ${show ? "" : "hidden"}`}
+      style={{
+        height: isHiding ? 0 : "38px",
+      }}
     >
       <h1
         title="Sign up and get 20% off to your first order."
