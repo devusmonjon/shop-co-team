@@ -7,6 +7,15 @@
     }
 }
 
+@media screen and (min-width: 470px) {
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .product {
+        width: 100%;
+    }
+}
+
 @layer utilities {
     .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -17,5 +26,11 @@
     }
     .container {
         @apply mx-auto px-5;
+    }
+}
+
+@layer components {
+    .product:hover .heart-icon {
+        opacity: 1;
     }
 }
