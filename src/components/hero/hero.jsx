@@ -1,7 +1,4 @@
 import { HeroStar, HeroStarLarge } from "@/icons";
-import React from "react";
-// import imges1 from "../../assets/Vector.svg";
-// import imges2 from "../../assets/Vector (1).svg";
 import CountUp from "react-countup";
 import { Button } from "..";
 const Hero = () => {

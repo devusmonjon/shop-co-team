@@ -11,3 +11,4 @@ export { default as Newsletter } from "./newsletter/newsletter";
 export { default as Hero } from "./hero/hero";
 
 export { default as Button } from "./button/button";
+export { default as SwiperContainer } from "./swiper/swiper";
