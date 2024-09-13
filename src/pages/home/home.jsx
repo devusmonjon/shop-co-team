@@ -1,5 +1,6 @@
-import { Hero, Products, SectionTitle, Button } from "@/components";
+import { Hero, HeroBanner, Products, SectionTitle, Button } from "@/components";
 import { useGetProductsQuery } from "@/context/api/productApi";
+import Swiper from "@/components/swiper/swiper";
 
 const Home = () => {
   const { data: products, isLoading } = useGetProductsQuery({
@@ -37,6 +38,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <HeroBanner/>
+      <Swiper/>
     </>
   );
 };

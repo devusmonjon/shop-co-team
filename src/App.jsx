@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { Layout } from "./layouts";
 import "./assets/fonts/fonts.css";
 import { Home } from "./pages";
+
 // import CountUp from "react-countup";
 
 const App = () => {

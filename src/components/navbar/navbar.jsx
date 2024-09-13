@@ -78,8 +78,8 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <form className="form flex items-center bg-[#f0eeed] rounded-[62px] px-[16px] w-full">
-          <Button type="submit">
+        <form className="form hidden sm:flex items-center bg-[#f0eeed] rounded-[62px] px-[16px] w-full">
+          <Button type="submit" className={"rounded-full"}>
             <SearchIcon />
           </Button>
           <input
