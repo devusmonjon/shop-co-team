@@ -1,7 +1,7 @@
 # Usmonjon: Hero discount, navbar, hero, products
 <hr>
 
-#Otabek: Footer, newsletter
+# Otabek: Footer, newsletter
 <hr>
 
-#Madina: Hero-banner, testimonials
+# Madina: Hero-banner, testimonials
