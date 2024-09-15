@@ -7,6 +7,22 @@
     }
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.scroll-hide::-webkit-scrollbar {
+    display: none;
+}
+
 @media screen and (min-width: 470px) {
     .products {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -32,5 +48,39 @@
 @layer components {
     .product:hover .heart-icon {
         opacity: 1;
+        pointer-events: all;
     }
+}
+
+
+/* nprogress.css */
+
+
+/* nprogress.css */
+
+#nprogress {
+    pointer-events: none;
+}
+
+#nprogress .bar {
+    background: #7961ff;
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+}
+
+#nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #facaff, 0 0 5px #fa52d3;
+    opacity: 1.0;
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
 }

@@ -12,8 +12,10 @@ const Button = ({
   return (
     <button
       className={`${
-        variant === "outline"
-          ? "rounded-[62px] px-[58px] py-[10px] border-2     border-[rgba(0, 0, 0, 0.10)] text-[16px] font-medium hover:bg-[#000] hover:text-[#fff] hover:border-black"
+        variant === "secondary"
+          ? "rounded-[62px] px-[58px] py-[10px] border-2 border-[transparent] bg-[#F0F0F0] text-[#00000099] text-[16px] font-medium hover:bg-[#000] hover:text-[#fff] hover:border-black"
+          : variant === "outline"
+          ? "rounded-[62px] px-[58px] py-[10px] border-2 border-[#0000001a] text-[16px] font-medium hover:bg-[#000] hover:text-[#fff] hover:border-black"
           : ""
       } ${
         variant === "primary"
