@@ -1,5 +1,8 @@
-import { Button } from "@/components";
-import { useGetProductByIdQuery } from "@/context/api/productApi";
+import { Button, Products, SectionTitle } from "@/components";
+import {
+  useGetProductByIdQuery,
+  useGetProductsQuery,
+} from "@/context/api/productApi";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Zoom from "react-medium-image-zoom";
@@ -11,7 +14,11 @@ import { addToCart, removeFromCart } from "@/context/slices/cartSlice";
 
 const Product = () => {
   const { id } = useParams();
-  const { data, isLoading } = useGetProductByIdQuery(id);
+  const { data } = useGetProductByIdQuery(id);
+  const { data: products, isLoading } = useGetProductsQuery({
+    limit: 4,
+    page: 2,
+  });
   const [image, setImage] = useState(0);
   const [count, setCount] = useState(1);
   const deicountPercentage = Math.round(
@@ -36,16 +43,16 @@ const Product = () => {
     smoothScroll();
   }, [data]);
   return (
-    <div className="container">
-      <div className="flex gap-[40px]">
-        <div className="w-[610px] h-[530px] flex justify-between">
-          <div className="h-[530px] w-[160px] overflow-y-auto scroll-hide">
-            <div className="px-[4px] w-full flex flex-col gap-2 ">
+    <div className="container mt-10">
+      <div className="flex gap-[40px] lg:flex-row flex-col">
+        <div className="lg:w-[610px] lg:h-[530px] flex justify-between flex-col lg:flex-row items-center">
+          <div className="min-h-[160px] lg:min-h-[530px] w-full sm:w-[550px] lg:w-[160px] overflow-x-auto lg:overflow-y-auto scroll-hide">
+            <div className="px-[4px] w-full flex flex-row *:lg:flex-col gap-2 ">
               {data?.images.map((item, idx) => (
                 <Button
                   onClick={() => setImage(idx)}
                   disabled={image === idx}
-                  className={`min-h-[152px] w-[152px] rounded-[20px] overflow-hidden ${
+                  className={`min-h-[152px] min-w-[152px] rounded-[20px] overflow-hidden ${
                     image === idx
                       ? "border-[2px] border-[#000] pointer-events-none"
                       : ""
@@ -61,7 +68,7 @@ const Product = () => {
               ))}
             </div>
           </div>
-          <div className="w-[444px] h-full overflow-hidden rounded-[20px] bg-[#f0eeed]">
+          <div className="w-full sm:w-[550px] lg:w-[444px] h-full overflow-hidden rounded-[20px] bg-[#f0eeed]">
             <Zoom>
               <img
                 src={data?.images[image]}
@@ -72,7 +79,9 @@ const Product = () => {
           </div>
         </div>
         <div className="details w-full">
-          <h1 className="text-[40px] font-bold font-integral">{data?.title}</h1>
+          <h1 className="text-[22px] sm:text-[28px] lg:text-[40px] font-bold font-integral">
+            {data?.title}
+          </h1>
           <div className="flex items-center gap-2">
             <ReactStars
               value={data?.rating}
@@ -175,6 +184,11 @@ const Product = () => {
           </div>
         </div>
       </div>
+      <SectionTitle
+        title={"You might also like"}
+        className={"text-center mt-[64px] mb-[55px]"}
+      />
+      <Products data={products} loading={isLoading} />
     </div>
   );
 };

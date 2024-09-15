@@ -7,6 +7,8 @@ import "swiper/css";
 import Product from "./pages/product/product";
 import nProgress from "nprogress";
 import { useEffect } from "react";
+import Cart from "./pages/cart/cart";
+import Wishlist from "./pages/wishlist/wishlist";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="products/:id" element={<Product />} />
+          <Route path="wishlist" element={<Wishlist />} />
+          <Route path="cart" element={<Cart />} />
         </Route>
         <Route
           path="*"
