@@ -206,8 +206,8 @@ const Product = () => {
     <div className="container mt-10">
       <div className="flex gap-[40px] lg:flex-row flex-col">
         <div className="lg:w-[610px] lg:h-[530px] flex justify-between flex-col lg:flex-row items-center">
-          <div className="min-h-[160px] lg:min-h-[530px] w-full sm:w-[550px] lg:w-[160px] overflow-x-auto lg:overflow-y-auto scroll-hide">
-            <div className="px-[4px] w-full flex flex-row *:lg:flex-col gap-2 ">
+          <div className="min-h-[175px] h-[175px] lg:h-[160px] lg:min-h-[530px] w-full sm:w-[550px] lg:w-[160px] overflow-x-auto lg:overflow-y-auto scroll-hide">
+            <div className="px-[4px] w-full flex flex-row lg:flex-col gap-2 ">
               {data?.images.map((item, idx) => (
                 <Button
                   onClick={() => setImage(idx)}
