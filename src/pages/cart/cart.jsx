@@ -1,11 +1,25 @@
 import { Button, SectionTitle } from "@/components";
 import { removeFromCart } from "@/context/slices/cartSlice";
+import { useEffect } from "react";
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart.value);
   const dispatch = useDispatch();
+  const location = useLocation();
+  useEffect(() => {
+    // smooth scroll
+    const smoothScroll = () => {
+      const c = document.documentElement.scrollTop || document.body.scrollTop;
+      if (c > 0) {
+        window.requestAnimationFrame(smoothScroll);
+        window.scrollTo(0, c - c / 8);
+      }
+    };
+    smoothScroll();
+  }, [location.pathname]);
   return (
     <>
       <div className="container">

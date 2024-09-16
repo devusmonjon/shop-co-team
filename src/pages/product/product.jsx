@@ -83,7 +83,7 @@ const Customer = () => {
           <Button
             key={index}
             onClick={() => setSelected(index)}
-            className={`text-[20px] transition-all cursor-pointer h-full py-2 border-b w-full whitespace-nowrap ${
+            className={`text-[20px] transition-all cursor-pointer h-full py-2 border-b w-full whitespace-nowrap focus:ring-transparent focus:border-b-slate-700 ${
               selected === index && "border-b-black"
             }`}
           >
@@ -129,7 +129,7 @@ const Customer = () => {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="border rounded-xl w-full md:w-[48%] hover:cursor-pointer hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out"
+                className="border rounded-xl w-full md:w-[48%] hover:cursor-pointer hover:shadow-md duration-300"
               >
                 <div className="flex ml-5 mt-5">
                   {[...Array(review.rating)].map((_, i) => (
@@ -150,14 +150,7 @@ const Customer = () => {
             ))}
 
             <div className="w-full flex items-center justify-center mt-2">
-              <button
-                className="hover:bg-gray-800 hover:text-gray-300 
-              active:bg-gray-900 active:scale-95 
-              focus:outline-none focus:ring-2 focus:ring-gray-500 
-              transition-all duration-300 ease-in-out rounded-full border border-[#0000001A] text-black font-bold h-[52px] w-[230px]"
-              >
-                Load More Reviews
-              </button>
+              <Button variant={"outline"}>Load More Reviews</Button>
             </div>
           </div>
         </>
