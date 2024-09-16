@@ -1,7 +1,7 @@
-# Usmonjon: Hero discount, navbar, hero, products
+# Usmonjon: Single product page, add to cart handler, add to wishlist handler, redux-toolkit slices config, search.
 <hr>
 
-# Otabek: Footer, newsletter
+# Otabek: Cart
 <hr>
 
-# Madina: Hero-banner, testimonials
+# Madina: Wishlist

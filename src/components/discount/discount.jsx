@@ -25,9 +25,9 @@ const Discount = () => {
         title="Sign up and get 20% off to your first order."
         className="text-[#fff] dark:text-[#000] text-center w-full relative z-10"
       >
-        Sign up and get 20% off to your first order.{" "}
+        Search qo'shildi, hoziroq Search formni to'ldiring va{" "}
         <a href="#" className="underline underline-offset-4">
-          Sign Up Now
+          sinab ko'ring!
         </a>
       </h1>
       <div className="absolute w-full h-[38px]">

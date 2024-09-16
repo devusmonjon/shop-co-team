@@ -8,9 +8,169 @@ import { useParams } from "react-router-dom";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import ReactStars from "react-stars";
-import { DecrementIcon, IncrementIcon } from "@/icons";
+import { ConfirmIcon, DecrementIcon, IncrementIcon } from "@/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "@/context/slices/cartSlice";
+
+import { IoIosStar } from "react-icons/io";
+import { GiSettingsKnobs } from "react-icons/gi";
+
+const Customer = () => {
+  const [selected, setSelected] = useState(0);
+  const [reviews, setReviews] = useState([
+    {
+      name: "James L.",
+      review:
+        "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.",
+      rating: 5,
+    },
+    {
+      name: "James L.",
+      review:
+        "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.",
+      rating: 5,
+    },
+    {
+      name: "James L.",
+      review:
+        "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.",
+      rating: 5,
+    },
+    {
+      name: "Sarah M.",
+      review: "Great collection! Absolutely loved the shopping experience.",
+      rating: 4,
+    },
+    {
+      name: "Michael B.",
+      review: "Fast delivery and top-notch quality products!",
+      rating: 5,
+    },
+    {
+      name: "Anna K.",
+      review: "Loved the range of products. Will shop again!",
+      rating: 4,
+    },
+    {
+      name: "John D.",
+      review: "A bit pricey, but the quality is worth it.",
+      rating: 4,
+    },
+    {
+      name: "Emily R.",
+      review: "Beautiful designs and fast delivery!",
+      rating: 5,
+    },
+    {
+      name: "Robert C.",
+      review: "Good customer service and high-quality items.",
+      rating: 5,
+    },
+    {
+      name: "Laura G.",
+      review: "The best online store I've ever shopped at!",
+      rating: 5,
+    },
+  ]);
+
+  const { id } = useParams();
+  const { data, isLoading } = useGetProductByIdQuery(id);
+
+  return (
+    <div>
+      <div className="container w-full flex items-center justify-between mt-[70px]">
+        {["Product Details", "Rating & Reviews", "FAQs"].map((item, index) => (
+          <Button
+            key={index}
+            onClick={() => setSelected(index)}
+            className={`text-[20px] transition-all cursor-pointer h-full py-2 border-b w-full whitespace-nowrap ${
+              selected === index && "border-b-black"
+            }`}
+          >
+            {item}
+          </Button>
+        ))}
+      </div>
+
+      {selected === 0 ? (
+        <>
+          <div className="container">
+            <p className="text-[22px] font-bold py-10 text-[#00000099]">
+              <span className="text-black">Product desc: </span>
+              {data?.desc}
+            </p>
+          </div>
+        </>
+      ) : selected === 1 ? (
+        <>
+          <div className="container w-full py-2 mt-[44px] flex items-center justify-between">
+            <p className="font-bold text-[22px]">
+              All Reviews <span className="font-normal text-[16px]">(451)</span>
+            </p>
+
+            <div className="flex items-center gap-3">
+              <Button variant={"secondary"} className="px-[10px] text-black">
+                <GiSettingsKnobs size={20.8} />
+              </Button>
+              <select
+                className="h-[48px] w-[120px] bg-slate-100 flex items-center justify-center rounded-full pl-2"
+                name=""
+                id=""
+              >
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="X-Large">X-Large</option>
+              </select>
+              <Button variant={"outline"}>Write a Review</Button>
+            </div>
+          </div>
+          <div className="container w-full mt-5 p-3 flex justify-center gap-5 flex-wrap">
+            {reviews.map((review, index) => (
+              <div
+                key={index}
+                className="border rounded-xl w-full md:w-[48%] hover:cursor-pointer hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out"
+              >
+                <div className="flex ml-5 mt-5">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <IoIosStar key={i} className="text-yellow-300" />
+                  ))}
+                </div>
+                <div className="flex items-center ml-5 mt-1">
+                  <p className="font-bold text-xl">{review.name}</p>
+                  {/* <img
+                src={imges}
+                alt="user-avatar"
+                className="ml-2 w-10 rounded-full object-cover"
+              /> */}
+                  <ConfirmIcon />
+                </div>
+                <p className="ml-5 mt-1 mb-5 mr-5">{review.review}</p>
+              </div>
+            ))}
+
+            <div className="w-full flex items-center justify-center mt-2">
+              <button
+                className="hover:bg-gray-800 hover:text-gray-300 
+              active:bg-gray-900 active:scale-95 
+              focus:outline-none focus:ring-2 focus:ring-gray-500 
+              transition-all duration-300 ease-in-out rounded-full border border-[#0000001A] text-black font-bold h-[52px] w-[230px]"
+              >
+                Load More Reviews
+              </button>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className="container">
+          <p className="text-[22px] font-bold py-10 text-[#00000099]">
+            <span className="text-black">FAQS</span>
+          </p>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const Product = () => {
   const { id } = useParams();
@@ -184,6 +344,7 @@ const Product = () => {
           </div>
         </div>
       </div>
+      <Customer />
       <SectionTitle
         title={"You might also like"}
         className={"text-center mt-[64px] mb-[55px]"}
